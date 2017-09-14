@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head
+  <meta charset="utf-8">
+  <title>Accessibility Course Overview</title>
+  <link rel="stylesheet" href="project2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="project2.js"></script>
+  <script src="projectariaimplementation.js"></script>
+</head>
+
+<body>
+<h1 style="text-align: center;">Main Content</h1>
+  <div class="offscreen"></div>
+  <div class="container">
+    <div class="navigation">
+
+
+      <a href="#" alt="home"><img src="pics/home.png"  alt="Navigate to the home page"></a>
+      <a href="#links-section" target=""><img src="pics/links.png"  alt="Navigate to different links"></a>
+      <a href="#sign-up-form" target=""><img src="pics/signup.png"  alt="Navigate to the signup section"></a>
+    </div>
+
+    <div id="accessibilitybanner" >
+      
+      <img src="pics/accessibilityoverviewbanner.png" alt="Banner image for decorative purpose">
+      <h1 class="absolute-banner-text" style="font-size: 72px; background-color: rgba(253, 253, 253, 0.6);">Accessibility Overview </h1>
+
+    </div>
+
+
+<div class="videoplayer">
+<iframe width="570" height="350" src="https://www.youtube.com/embed/Fc5HeI0brHw" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+<div id="links-section">
+<h2 >Links</h2>
+<img src="pics/dot.png" title="decorative bullet point" alt="dot">&nbsp;<a href="http://accessibility.cs.cmu.edu" title="More information on topic: Accessibility Research at CMU">Accessibility Research at CMU</a><br>
+<img src="pics/dot.png" title="decorative bullet point" alt="dot">&nbsp;<a href="https://www.cmu.edu/hr/eos/disability/" title="More information on topic: disability services at CMU">Disability Services at CMU</a><br>
+<img src="pics/dot.png" title="decorative bullet point" alt="dot">&nbsp;<a href="http://www.hampsterdance.com/classics/originaldance.htm" title="More information on topic: Hampster Dance">Hampster Dance</a><br>
+</div>
+
+<h2>Sign Up!</h2>
+<form id="sign-up-form">
+
+<p>
+  <label for="name">Name:</label>  
+  <input name="fn" type="text" size="10" id="name"> 
+  
+  <label for="miname">Mi:</label>  
+  <input name="mi" type="text" size="1" id="miname">
+  
+  <label for="lname">Ln:</label>  
+  <input name="ln" type="text" size="10" id="lname">
+
+  <br>
+</p>
+<p>
+  <label for="em">Email:</label>   
+  <input id="em" name="em" type="text" size="20">
+</p>
+<p>
+  <!--<span id="spamtext">Would you like to receive occassional emails with offers from us?</span>
+  <div id="receivespambutton" role="checkbox">
+    <img src="pics/checked.png" alt="checkbox">
+  </div>-->
+
+<div>
+  <h3 id="spamtext">Would you like to receive occassional emails with offers from us?</h3>
+
+  <div role="checkbox"
+         aria-checked="true"
+         tabindex="0"
+         onkeydown="toggleCheckbox(event)"
+         onclick="toggleCheckbox(event)"
+         onfocus="focusCheckbox(event)"
+         onblur="blurCheckbox(event)">
+      <img src="pics/checked.png" alt="">
+  </div>
+</div>
+
+  <input type="hidden" name="spamyn" id="spamyn" value="n">
+</p>
+<p>
+  <h3>Comments:</h3>
+  <label for="commentsection">Enter your address:</label><br>
+  <br>
+  <textarea rows="5" cols="40" id="commentsection"></textarea>
+</p>
+ <input type="button" value="Sign Up!" id="signupbutton">
+</form>
+
+</div><!-- end div.container -->
+</body>
+</html>
